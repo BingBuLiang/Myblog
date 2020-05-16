@@ -31,5 +31,9 @@ public interface BlogDao {
     User selUserByName(String uname);
 
     @Select("select * from user")
-    List<User> listUser();
+    List<User> listUsers();
+
+    @Select("select * from user")
+    List<User> listUsers1();
+
 }
