@@ -3,6 +3,7 @@ package com.blog.dao;
 import com.blog.pojo.Description;
 import com.blog.pojo.Information;
 import com.blog.pojo.Link;
+import com.blog.pojo.User;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
@@ -25,5 +26,8 @@ public interface BlogDao {
 
     @Select("select * from information where uname=#{0}")
     Information selInfByName(String uname);
+
+    @Select("select * from user where uanme=#{0}")
+    User selUserByName(String uname);
 
 }
