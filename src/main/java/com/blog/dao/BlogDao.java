@@ -30,4 +30,6 @@ public interface BlogDao {
     @Select("select * from user where uanme=#{0}")
     User selUserByName(String uname);
 
+    @Select("select * from user")
+    List<User> listUser();
 }
